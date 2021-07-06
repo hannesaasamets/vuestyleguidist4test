@@ -16,7 +16,13 @@ export default {
 		 */
 		color: {
 			type: String,
-			default: 'black'
+			default: 'black',
+      validator: color => [
+        ...[ // REMOVE THIS LINE TO RENDER THE PROPS IN STYLEGUIDIST
+          'black',
+          'blue',
+        ], // ALSO REMOVE THIS LINE TO RENDER THE PROPS IN STYLEGUIDIST
+      ].includes(color),
 		},
 		/** Sets background color of the button
 		 * @since 1.2.0
